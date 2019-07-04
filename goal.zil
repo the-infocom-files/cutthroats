@@ -369,7 +369,7 @@ which, for a given character, is the P?CHARACTER property of the object."
 			<COND (.FOUND <RETURN .FOUND>)>)>
 		 <SET CNT <+ .CNT 1>>>>
 
-<GLOBAL CHARACTER-TABLE <PTABLE PLAYER MCGINTY JOHNNY PETE WEASEL DELIVERY-BOY>>
+<GLOBAL CHARACTER-TABLE <PTABLE <>;PLAYER MCGINTY JOHNNY PETE WEASEL DELIVERY-BOY>>
 
 "Goal tables for the 6 characters (including PLAYER), offset
 by the preceding constants, which, for a given character,

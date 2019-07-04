@@ -3,6 +3,8 @@
 	(c) Copyright 1984 Infocom, Inc.  All Rights Reserved.
 "
 
+<CONSTANT RELEASEID 1> <VERSION ZIP>
+
 <GC-MON <>>
 ;<COND (<GASSIGNED? ZILCH> <GC 0 T>)
       (T <GC 0 T 5>)>
@@ -28,31 +30,31 @@
 <COND (<GASSIGNED? PREDGEN>
        <ID 0>)>
 
-<IFILE "MACROS" T>
+<IFILE "macros" T>
 
-<IFILE "GLOBALS" T>
+<IFILE "globals" T>
+
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
 ;<PROPDEF VALUE 0>
 
-<IFILE "SYNTAX" T>
+<IFILE "syntax" T>
 <ENDLOAD>
 
-<IFILE "CLOCK" T>
-<IFILE "MAIN" T>
-<IFILE "PARSER" T>
-<IFILE "VERBS" T>
-
-
+<IFILE "clock" T>
+<IFILE "main" T>
+<IFILE "parser" T>
+<IFILE "verbs" T>
 
 ;"Jerry: Add your files here, as with GOAL"
 
-<IFILE "GOAL" T>
-<IFILE "ISLAND" T>
-<IFILE "BOAT" T>
-<IFILE "WRECKS" T>
-<IFILE "PEOPLE" T>
-<IFILE "EVENTS" T>
+<IFILE "goal" T>
+<IFILE "island" T>
+<IFILE "boat" T>
+<IFILE "wrecks" T>
+<IFILE "people" T>
+<IFILE "events" T>
+
 ;<COND (<NOT <GASSIGNED? PREDGEN>>
        <CLOSE!- ,XTELLCHAN>)>
 <PRINC "
