@@ -38,7 +38,7 @@ Copyright (C) 1984 Infocom, Inc.  All rights reserved."
  
 <GLOBAL P-DIR 0>    
  
-<GLOBAL HERE 0>
+;<GLOBAL HERE 0>
  
 <GLOBAL WINNER 0>   
  

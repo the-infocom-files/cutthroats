@@ -65,7 +65,7 @@
 		<THE? ,PRSO>
 		<TELL D ,PRSO "." CR>)>>
 
-<GLOBAL LIT <>>
+;<GLOBAL LIT <>>
 
 <ROUTINE DESCRIBE-ROOM ("OPTIONAL" (LOOK? <>) "AUX" V? STR (AV <>))
 	 <SET V? <OR .LOOK? ,VERBOSE>>
