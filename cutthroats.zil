@@ -3,7 +3,7 @@
 	(c) Copyright 1984 Infocom, Inc.  All Rights Reserved.
 "
 
-<CONSTANT RELEASEID 1> <VERSION ZIP>
+<CONSTANT RELEASEID 1> <VERSION ZIP TIME>
 
 <INSERT-FILE "clock" T>
 <INSERT-FILE "macros" T>
