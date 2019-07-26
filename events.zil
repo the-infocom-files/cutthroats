@@ -866,7 +866,7 @@ back to a permanent sleep by the Weasel's knife.">)>
 	  <SET F .N>>
 	 <COND (.V <TELL ", dropping your equipment">)>>
 
-<ROUTINE INTERRUPT-CHECK (DUR "AUX" C E TICK FOO R)
+<ROUTINE INTERRUPT-CHECK (DUR "AUX" C E TICK FOO)
 	 <SET C <REST ,C-TABLE ,C-INTS>>
 	 <SET E <REST ,C-TABLE ,C-TABLELEN>>
 	 <SETG ASLEEP T>

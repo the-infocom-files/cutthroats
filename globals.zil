@@ -891,7 +891,7 @@ points to the minute?" CR>)
 
 <GLOBAL WAITED? <>>
 
-<ROUTINE RANDOM-WALK ("AUX" P Z L S (D <>))
+<ROUTINE RANDOM-WALK ("AUX" P Z L (D <>))
 	 <SET P 0>
 	 <REPEAT ()
 		 <COND (<L? <SET P <NEXTP ,HERE .P>> ,LOW-DIRECTION>
@@ -1523,7 +1523,7 @@ CR>)
 	 <SETG PRSI <>>
 	 <RFATAL>>
 
-<ROUTINE FIND-NOT-HERE (TBL PRSO? "AUX" M-F OBJ CTR PER)
+<ROUTINE FIND-NOT-HERE (TBL PRSO? "AUX" M-F OBJ PER)
 	;"Here is where special-case code goes. <MOBY-FIND .TBL> returns
 	   number of matches. If 1, then P-MOBY-FOUND is it. One may treat
 	   the 0 and >1 cases alike or different. It doesn't matter. Always

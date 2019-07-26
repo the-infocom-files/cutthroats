@@ -145,7 +145,7 @@ Copyright (C) 1984 Infocom, Inc.  All rights reserved."
 
 ;<GLOBAL X-IS-LISTENING <>>
 <ROUTINE PARSER ("AUX" (PTR ,P-LEXSTART) WORD (VAL 0) (VERB <>)
-		       LEN (DIR <>) (NW 0) (LW 0) NUM SCNT (CNT -1)) 
+		       LEN (DIR <>) (NW 0) (LW 0) NUM (CNT -1)) 
 	<REPEAT ()
 		<COND (<G? <SET CNT <+ .CNT 1>> ,P-ITBLLEN> <RETURN>)
 		      (T <PUT ,P-ITBL .CNT 0>)>>
@@ -629,7 +629,7 @@ important questions that you can't ask directly.)" CR>
 
 
 
-<ROUTINE UNKNOWN-WORD (PTR "AUX" BUF MSG) 
+<ROUTINE UNKNOWN-WORD (PTR "AUX" BUF) 
 	#DECL ((PTR BUF) FIX)
 	<TELL "I don't know the word \"">
 	<WORD-PRINT <GETB <REST ,P-LEXV <SET BUF <* .PTR 2>>> 2>
@@ -934,8 +934,8 @@ important questions that you can't ask directly.)" CR>
 			    (T <SETG P-PRSI <BUT-MERGE ,P-PRSI>>)>)>)>
 	<RTRUE>>  
 
-<ROUTINE BUT-MERGE (TBL "AUX" LEN BUTLEN (CNT 1) (MATCHES 0) OBJ NTBL) 
-	#DECL ((TBL NTBL) TABLE (LEN BUTLEN MATCHES) FIX (OBJ) OBJECT)
+<ROUTINE BUT-MERGE (TBL "AUX" LEN (CNT 1) (MATCHES 0) OBJ NTBL) 
+	#DECL ((TBL NTBL) TABLE (LEN MATCHES) FIX (OBJ) OBJECT)
 	<SET LEN <GET .TBL ,P-MATCHLEN>>
 	<PUT ,P-MERGE ,P-MATCHLEN 0>
 	<REPEAT ()
@@ -986,7 +986,7 @@ important questions that you can't ask directly.)" CR>
 <GLOBAL P-CEPTR <>>
 <GLOBAL P-AND <>>
 
-<ROUTINE SNARFEM (PTR EPTR TBL "AUX" (AND <>) (BUT <>) LEN WV WORD NW) 
+<ROUTINE SNARFEM (PTR EPTR TBL "AUX" (AND <>) (BUT <>) WV WORD NW) 
    #DECL ((TBL) TABLE (PTR EPTR) <PRIMTYPE VECTOR> (AND) <OR ATOM FALSE>
 	  (BUT) <OR FALSE TABLE> (WV) <OR FALSE FIX>)
    <SETG P-AND <>>
@@ -1054,7 +1054,7 @@ important questions that you can't ask directly.)" CR>
 
 <ROUTINE GET-OBJECT (TBL
 		    "OPTIONAL" (VRB T)
-		    "AUX" BITS LEN XBITS TLEN (GCHECK <>) (OLEN 0) OBJ)
+		    "AUX" BITS LEN XBITS TLEN (GCHECK <>) (OLEN 0))
 	#DECL ((TBL) TABLE (XBITS TLEN LEN) FIX (GWIM) <OR FALSE FIX>
 	       (VRB GCHECK) <OR ATOM FALSE>)
  <SET XBITS ,P-SLOCBITS>
@@ -1270,8 +1270,8 @@ important questions that you can't ask directly.)" CR>
 	       <DO-SL ,GLOBAL-OBJECTS 1 1>
 	       <SETG P-SLOCBITS .OBITS>)>>
 
-<ROUTINE DO-SL (OBJ BIT1 BIT2 "AUX" BITS) 
-	#DECL ((OBJ) OBJECT (BIT1 BIT2 BITS) FIX)
+<ROUTINE DO-SL (OBJ BIT1 BIT2) 
+	#DECL ((OBJ) OBJECT (BIT1 BIT2) FIX)
 	<COND (<BTST ,P-SLOCBITS <+ .BIT1 .BIT2>>
 	       <SEARCH-LIST .OBJ ,P-TABLE ,P-SRCALL>)
 	      (T
