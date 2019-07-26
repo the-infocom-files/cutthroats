@@ -629,7 +629,7 @@ You can't help feeling fortunate that someone else happened to be here." CR>>
 	       (<NOT <IN? ,WEASEL ,FERRY-LANDING>>
 		<RFALSE>)
 	       (<IN? ,ID-CARD ,WEASEL>
-		<COND (<IN? ,PASSBOOK .WEASEL>
+		<COND (<IN? ,PASSBOOK ,WEASEL>
 		       <COND (<IN? ,FERRY ,FERRY-LANDING>
 		       	      <MOVE ,WEASEL ,FERRY>
 		       	      <SET FERRY-HERE T>)>

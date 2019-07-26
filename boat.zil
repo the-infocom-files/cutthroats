@@ -805,7 +805,7 @@ this too late, though.">)>>
 		       <TELL-STEW-ON>)>
 		<COND (<AND ,WATER-DELIVERED
 			    <==? <GETP ,SHIP-CHOSEN ,P?LINE>
-				 <GETP ,PLACE ,P?LINE>>>
+				 <GETP .PLACE ,P?LINE>>>
 		       <TELL " Water is available.">)>
 		<TELL
 " A ladder leads up through the deck to the wheelhouse for
