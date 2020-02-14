@@ -20,12 +20,10 @@ The following sources provide further information on Cutthroats:
 
 ## Version History
 
-Zarf's Obsessively Complete Infocom Catalog holds copies of the game files for every existing version of Cutthroats listed in the Infocom Fact Sheet. It also holds the source files for versions 23/840809 and 25/840917.
-
-| Release | Serial | Story File                  | Zarf Sources         | Historical Sources |
-| -------:|:------:|:---------------------------:|:--------------------:|:------------------:|
-|      23 | 840809 | [cutthroats-r23-s840809.z3] | [cutthroats-r23.zip] |      [revision 23] |
-|      25 | 840917 | [cutthroats-r25-s840917.z3] | [cutthroats-r25.zip] |    [final revision] |
+| Release | Serial | Type | Story File                  | Obsessive Sources    | Historical Sources |
+| -------:|:------:|:----:|:---------------------------:|:--------------------:|:------------------:|
+|      23 | 840809 |  PUB | [cutthroats-r23-s840809.z3] | [cutthroats-r23.zip] |      [revision 23] |
+|      25 | 840917 |  FIN | [cutthroats-r25-s840917.z3] | [cutthroats-r25.zip] |    [final revision] |
 
 [cutthroats-r23-s840809.z3]: https://eblong.com/infocom/gamefiles/cutthroats-r23-s840809.z3
 [cutthroats-r23.zip]: https://eblong.com/infocom/sources/cutthroats-r23.zip
