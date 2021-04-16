@@ -200,7 +200,7 @@ is off to the other side of the rail.")
       (STATION MM-PORT-DECK)
       (ACTION MM-PORT-DECK-F)>
 
-<ROUTINE MM-PORT-DECK-F (RARG "AUX" DOCK?)
+<ROUTINE MM-PORT-DECK-F (RARG)
 	 <COND (<EQUAL? .RARG ,M-ENTER>
 		<MOVE ,BUNK ,MM-CREW-QTRS>
 		<MOVE ,UNDER-BUNK ,MM-CREW-QTRS>
@@ -686,7 +686,7 @@ this too late, though.">)>>
       (PSEUDO "BUNKS" BUNKS-PSEUDO)
       (ACTION MM-CREW-QTRS-F)>
 
-<ROUTINE MM-CREW-QTRS-F (RARG "AUX" W)
+<ROUTINE MM-CREW-QTRS-F (RARG)
 	 <COND (<==? .RARG ,M-LOOK>
 		<TELL-CREW-QTRS>
 		<RTRUE>)
@@ -805,7 +805,7 @@ this too late, though.">)>>
 		       <TELL-STEW-ON>)>
 		<COND (<AND ,WATER-DELIVERED
 			    <==? <GETP ,SHIP-CHOSEN ,P?LINE>
-				 <GETP ,PLACE ,P?LINE>>>
+				 <GETP .PLACE ,P?LINE>>>
 		       <TELL " Water is available.">)>
 		<TELL
 " A ladder leads up through the deck to the wheelhouse for
@@ -1333,7 +1333,7 @@ line the bulkheads, and you note the similarity between this area and a
 sardine can. Sleeping here is necessary but uninviting. A ladder leads
 up and out to the fore deck." CR>>
 
-<ROUTINE NW-CREW-QTRS-F (RARG "AUX" W)
+<ROUTINE NW-CREW-QTRS-F (RARG)
 	 <COND (<==? .RARG ,M-LOOK>
 		<TELL-CREW-QTRS>)
 	       (<==? .RARG ,M-ENTER>

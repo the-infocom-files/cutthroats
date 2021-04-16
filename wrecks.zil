@@ -1371,7 +1371,7 @@ go up.">>
 		       <TELL-YOUD-BETTER "get off the chest" T>)
 		      (<AND <VERB? MOVE>
 			    <PRSO? ,SAFETY-LINE>
-			    <IN? ,SAFETY-LINE ,CHEST>>
+			    <IN? ,SAFETY-LINE .CHEST>>
 		       <JIGS-UP
 "As the chest starts to rise, you fall off it rather awkwardly and disconnect
 your airhose.">)>)

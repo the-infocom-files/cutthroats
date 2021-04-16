@@ -231,7 +231,7 @@ pulls out his gun and shoots.">)>)>
 CR CR>
 	 <V-FIRST-LOOK>>
 
-<ROUTINE I-MCGINTY ("OPTIONAL" (GARG <>) "AUX" (L <LOC ,MCGINTY>) DEST MMG
+<ROUTINE I-MCGINTY ("OPTIONAL" (GARG <>) "AUX" (L <LOC ,MCGINTY>) MMG
 		    			       (V <>))
 	 <COND (<NOT .GARG>
 		<SET MMG <GET ,MOVEMENT-GOALS ,MCGINTY-C>>
@@ -1936,7 +1936,7 @@ currently shows ">
 		<RTRUE>)>>
 
 <ROUTINE I-DELIVERY-BOY ("OPTIONAL" (GARG <>) "AUX" (L <LOC ,DELIVERY-BOY>)
-			                            DMG OBJ DEST)
+			                            DMG OBJ)
 	 <COND (<NOT .GARG>
 		<SET DMG <GET ,MOVEMENT-GOALS ,DELIVERY-BOY-C>>
 		<COND (<L? ,PRESENT-TIME 485> T)

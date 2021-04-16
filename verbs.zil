@@ -108,7 +108,7 @@ long description (fdesc or ldesc), otherwise will print short."
 
 <GLOBAL DESC-OBJECT <>>
 
-<ROUTINE DESCRIBE-OBJECT (OBJ V? LEVEL "AUX" (STR <>) AV)
+<ROUTINE DESCRIBE-OBJECT (OBJ V? LEVEL "AUX" (STR <>))
 	 <SETG DESC-OBJECT .OBJ>
 	 <COND (<AND <0? .LEVEL>
 		     <APPLY <GETP .OBJ ,P?DESCFCN> ,M-OBJDESC>>
@@ -283,7 +283,7 @@ or QUIT): >">
 	       (<EQUAL? <GET ,P-LEXV 1> ,W?QUIT ,W?Q>
 		<QUIT>)>>>
 
-<ROUTINE V-QUIT ("OPTIONAL" (ASK? T) "AUX" SCOR)
+<ROUTINE V-QUIT ("OPTIONAL" (ASK? T))
 	 <V-SCORE>
 	 <COND (<OR <AND .ASK?
 			 <TELL
@@ -680,7 +680,7 @@ feel something start to munch on you. Something large.">)
 
 <GLOBAL FUMBLE-NUMBER 7>
 
-<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT OBJ TEMP)
+<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT TEMP)
 	 <COND (<NOT <FSET? ,PRSO ,TAKEBIT>>
 		<COND (.VB
 		       <TELL <PICK-ONE ,YUKS> CR>)>
@@ -728,7 +728,7 @@ feel something start to munch on you. Something large.">)
 		  <THE? ,PRSI>
 		  <TELL D ,PRSI "." CR>)>>
 
-<ROUTINE PRE-PUT ("AUX" OBJ)
+<ROUTINE PRE-PUT ()
 	 <COND (<NOT ,PRSI>
 		<TELL "Huh?" CR>)
 	       (<PRSO? ,NOT-HERE-OBJECT ,GLOBAL-SELF ,MAGNET>
@@ -991,7 +991,7 @@ feel something start to munch on you. Something large.">)
 "You find that you can provide " D ,GLOBAL-SELF " with no new information."
 CR>>
 
-<ROUTINE PRE-ASK-CONTEXT-ABOUT ("AUX" P)
+<ROUTINE PRE-ASK-CONTEXT-ABOUT ()
  <COND (<AND ,QCONTEXT
 	     <==? ,HERE ,QCONTEXT-ROOM>
 	     <==? ,HERE <META-LOC ,QCONTEXT>>>
@@ -1030,7 +1030,7 @@ CR>>
 	       (T
 		<SUDDENLY-REALIZE-TALKING ,PRSO>)>>
 
-<ROUTINE PRE-ASK-CONTEXT-FOR ("AUX" P)
+<ROUTINE PRE-ASK-CONTEXT-FOR ()
  <COND (<AND ,QCONTEXT
 	     <==? ,HERE ,QCONTEXT-ROOM>
 	     <==? ,HERE <META-LOC ,QCONTEXT>>>
@@ -1388,7 +1388,7 @@ Copyright (c) 1984, Infocom, Inc. All rights reserved.|">
 
 <ROUTINE GOTO (RM "OPTIONAL" (V? T)
 	       "AUX" (LB <FSET? .RM ,RLANDBIT>) (WLOC <LOC ,WINNER>)
-	             (AV <>) OLIT F N)
+	             (AV <>) OLIT F)
 	 <SET OLIT ,LIT>
 	 <COND (<FSET? .WLOC ,VEHBIT>
 		<TELL-YOUD-BETTER "get " <> <>>
@@ -1463,7 +1463,7 @@ has long, sharp teeth that feel uncomfortable when they enter your body.">)>
 		<FSET ,PRSO ,NDESCBIT>
 		<TELL "It evaporates immediately." CR>)>>
 
-<ROUTINE V-POUR-IN ("AUX" L)
+<ROUTINE V-POUR-IN ()
 	 <COND (<NOT <POURABLE? ,PRSO>>
 		<TELL "I don't think you can pour " A ,PRSO ".">)
 	       (<NOT <FSET? ,PRSI ,CONTBIT>>
@@ -1630,7 +1630,7 @@ dinner than the diner." CR>)
 		<START-SENTENCE ,PRSO>
 		<TELL " makes no sound." CR>)>>
 
-<ROUTINE V-FOLLOW ("AUX" CN CHR COR PCOR L)
+<ROUTINE V-FOLLOW ("AUX" COR PCOR L)
 	 <SETG L-PRSO ,PRSO>
 	 <SETG L-PRSA ,PRSA>
 	 <COND (<NOT <==? ,WINNER ,PLAYER>>
@@ -2700,7 +2700,7 @@ of water here would make this a lousy place to try diving." CR>)>>
 <ROUTINE V-SPIN ()
 	 <TELL-YOU-CANT "spin that!">>
 
-<ROUTINE V-THROUGH ("AUX" M)
+<ROUTINE V-THROUGH ()
 	<COND (<FSET? ,PRSO ,DOORBIT>
 	       <DO-WALK <OTHER-SIDE ,PRSO>>
 	       <RTRUE>)

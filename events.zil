@@ -629,7 +629,7 @@ You can't help feeling fortunate that someone else happened to be here." CR>>
 	       (<NOT <IN? ,WEASEL ,FERRY-LANDING>>
 		<RFALSE>)
 	       (<IN? ,ID-CARD ,WEASEL>
-		<COND (<IN? ,PASSBOOK .WEASEL>
+		<COND (<IN? ,PASSBOOK ,WEASEL>
 		       <COND (<IN? ,FERRY ,FERRY-LANDING>
 		       	      <MOVE ,WEASEL ,FERRY>
 		       	      <SET FERRY-HERE T>)>
@@ -866,7 +866,7 @@ back to a permanent sleep by the Weasel's knife.">)>
 	  <SET F .N>>
 	 <COND (.V <TELL ", dropping your equipment">)>>
 
-<ROUTINE INTERRUPT-CHECK (DUR "AUX" C E TICK FOO R)
+<ROUTINE INTERRUPT-CHECK (DUR "AUX" C E TICK FOO)
 	 <SET C <REST ,C-TABLE ,C-INTS>>
 	 <SET E <REST ,C-TABLE ,C-TABLELEN>>
 	 <SETG ASLEEP T>
